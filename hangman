@@ -1,0 +1,779 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <conio.h>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    int szansa=9,los;
+    char start;
+    string haslo;
+    string litera;
+    srand(time(NULL));
+    los= rand() %10;
+    cout << " _____________________________________________________ " << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                nacisnij klawisz enter               |" << "\n";
+    cout << "|                  aby rozpoczac gre                  |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|                 jesli chcesz zakonczyc              |" << "\n";
+    cout << "|                     nacisnij esc                    |" << "\n";
+    cout << "|                                                     |" << "\n";
+    cout << "|_____________________________________________________|" << "\n";
+    start=getch();
+    if(start==13){
+     system("cls");
+    if(los==4)
+        {
+        string tab[7]={"_","_","_","_","_","_","_"};
+        haslo="widelec";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="w"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="i")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="d")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="e")
+            {
+                tab[3]=litera;
+                tab[5]=litera;
+                i=i+1;
+            }
+            else if(litera=="l")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+            else if(litera=="c")
+            {
+                tab[6]=litera;
+                i=i+1;
+            }
+            else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<7;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+            cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+    if(los==1)
+        {
+        string tab[3]={"_","_","_"};
+        haslo="gol";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+                if(litera=="g")
+                    {
+                            tab[0]=litera;
+                            i=i+1;
+                    }
+                else if(litera=="o")
+                    {
+                            tab[1]=litera;
+                            i=i+1;
+                    }
+                else if(litera=="l")
+                    {
+                            tab[2]=litera;
+                            i=i+1;
+                    }
+                else if(litera==haslo)
+                    {
+                            cout << "wygrales";
+                            break;
+                    }
+                else
+                    {
+                            szansa=szansa-1;
+                            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+                    }
+                for(int i=0;i<3;i++)
+                    {
+                            cout << tab[i] << " ";
+                    }
+            cout << "\n";
+               if(szansa==0)
+                    {
+                            break;
+                    }
+        }
+        if(szansa==0){
+              cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+    if(los==2)
+        {
+        string tab[5]={"_","_","_","_","_"};
+        haslo="bilet";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="b"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="i")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="l")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="e")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+            else if(litera=="t")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+            else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<5;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+             cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+    if(los==3)
+        {
+        string tab[7]={"_","_","_","_","_","_","_"};
+        haslo="trening";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="t"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="r")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="e")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="n")
+            {
+                tab[3]=litera;
+                tab[5]=litera;
+                i=i+1;
+            }
+            else if(litera=="i")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+            else if(litera=="g")
+            {
+                tab[6]=litera;
+                i=i+1;
+            }
+            else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<7;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+            if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+             cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+    if(los==5)
+        {
+        string tab[4]={"_","_","_","_"};
+        haslo="boks";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="b"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="o")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="k")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="s")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+             else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<4;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+              cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+     if(los==6)
+        {
+        string tab[8]={"_","_","_","_","_","_","_","_"};
+        haslo="internet";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="i"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="n")
+            {
+                tab[1]=litera;
+                tab[5]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="t")
+            {
+                tab[2]=litera;
+                tab[7]=litera;
+                i=i+1;
+            }
+            else if(litera=="e")
+            {
+                tab[3]=litera;
+                tab[6]=litera;
+                i=i+1;
+            }
+            else if (litera=="r")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+             else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<8;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+              cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+     if(los==7)
+        {
+        string tab[4]={"_","_","_","_"};
+        haslo="kret";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="k"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="r")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="e")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="t")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+             else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<4;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+             cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+     if(los==8)
+        {
+        string tab[7]={"_","_","_","_","_","_","_"};
+        haslo="ruletka";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="r"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="u")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="l")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="e")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+            else if(litera=="t")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+            else if(litera=="k")
+            {
+                tab[5]=litera;
+                i=i+1;
+            }
+            else if(litera=="a")
+            {
+                tab[6]=litera;
+                i=i+1;
+            }
+            else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<7;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+             cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+     if(los==9)
+        {
+        string tab[4]={"_","_","_","_"};
+        haslo="brew";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="b"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="r")
+            {
+                tab[1]=litera;
+             i=i+1   ;
+            }
+            else if(litera=="e")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="w")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+             else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<4;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+              cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+     if(los==10)
+        {
+        string tab[6]={"_","_","_","_","_","_"};
+        haslo="jagoda";
+        for(int i=10;i>0;i--)
+        {   cout << "podaj litere" << "\n";
+            cin >> litera;
+            if(litera=="j"){
+                tab[0]=litera;
+                i=i+1;
+            }
+            else if(litera=="a")
+            {
+                tab[1]=litera;
+                tab[5]=litera;
+                i=i+1;
+            }
+            else if(litera=="g")
+            {
+                tab[2]=litera;
+                i=i+1;
+            }
+            else if(litera=="o")
+            {
+                tab[3]=litera;
+                i=i+1;
+            }
+            else if(litera=="d")
+            {
+                tab[4]=litera;
+                i=i+1;
+            }
+             else if(litera==haslo)
+            {
+                cout << "wygrales";
+                break;
+            }
+            else
+            {
+                szansa=szansa-1;
+            cout<<"nieprawidlowa litera, zostalo ci  " << szansa << " szans \n";
+            }
+            for(int i=0;i<6;i++)
+            {
+                cout << tab[i] << " ";
+            }
+            cout << "\n";
+
+             if(szansa==0)
+                {
+                break;
+                }
+        }
+        if(szansa==0){
+             cout << "przegrales" << "\n";
+             cout << " {}{}{}{}{}{}{}{}{}{}{} "<< "\n";
+         cout << " {}  //          {}     "<< "\n";
+         cout << " {} //           {}     "<< "\n";
+         cout << " {}//          /----\\   "<< "\n";
+         cout << " {}/          | X  X |  "<< "\n";
+         cout << " {}           |  __  |  "<< "\n";
+         cout << " {}	       \\____/   "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}           /==[]==\\  "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}          |   []   | "<< "\n";
+         cout << " {}              []     "<< "\n";
+         cout << " {}             //\\\\    "<< "\n";
+         cout << " {}            //  \\\\   "<< "\n";
+         cout << " {}          (__)  (__) "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << " {}                     "<< "\n";
+         cout << "{}{}{}{}{}{}{}{}{}{}{}{}"<< "\n";
+        }
+        }
+}
+else if(start==27)
+{
+    system("cls");
+    cout << "zegnam";
+    return 0;
+}
+}
